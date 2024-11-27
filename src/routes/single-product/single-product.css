@@ -1,0 +1,190 @@
+/* Single Product Section */
+.single-product {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 85%; /* Slightly narrower for cleaner presentation */
+  margin-bottom: 4rem; /* Increased spacing for breathing room */
+  justify-content: center;
+  gap: 3.5rem;
+  padding: 2rem;
+  background-color: #f7fafc; /* Light background for better contrast */
+  border-radius: 12px; /* Rounded corners for a modern look */
+  box-shadow: 0px 8px 20px rgba(0, 95, 115, 0.1); /* Soft shadow for depth */
+}
+
+/* Product Title Styling */
+.single-product-titles {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  padding: 6rem 2rem; /* Balanced padding */
+  text-align: center; /* Center-align titles */
+}
+
+.single-product-titles .category {
+  text-transform: uppercase;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  color: #028090; /* Modern teal color for categories */
+  letter-spacing: 2px; /* Increased letter spacing for better clarity */
+}
+
+.single-product-titles .brand {
+  font-weight: 700;
+  font-size: 2rem;
+  color: #05668d; /* Modern, bold color for the brand */
+}
+
+.single-product-titles .name {
+  font-weight: 400;
+  font-size: 1.875rem;
+  line-height: 2.5rem;
+  color: #333; /* Softer, neutral color */
+}
+
+/* Product Showcase Section */
+.product-showcase {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3-column layout for cleaner look */
+  gap: 2rem; /* Spacing between product images */
+  align-items: start;
+  padding: 1rem;
+}
+
+.product-showcase img {
+  width: 100%;
+  height: auto;
+  max-height: 25rem; /* Increase height for better image scaling */
+  object-fit: cover;
+  border-radius: 12px; /* Rounded image corners for modern design */
+  box-shadow: 0px 4px 15px rgba(0, 95, 115, 0.1); /* Subtle shadow */
+  transition: transform 0.3s ease; /* Add smooth hover effect */
+}
+
+.product-showcase img:hover {
+  transform: scale(1.05); /* Zoom effect on hover */
+}
+
+/* Product Data Section */
+.single-product .data {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  padding: 1rem;
+}
+
+/* Product Price Section */
+.single-product-price {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.single-product-price p {
+  font-weight: 700;
+  font-size: 2rem;
+  color: #05668d; /* Teal color for price */
+}
+
+.single-product-pricing .product-price {
+  font-weight: 700;
+  font-size: 1.75rem;
+  color: #333;
+}
+
+/* Add to Cart Buttons */
+.addtocart .active-add-to-cart,
+.addtocart .inactive-add-to-cart {
+  padding: 0.75rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: white;
+  background-color: #05668d; /* Teal for active button */
+  border: none;
+  border-radius: 50px; /* Fully rounded buttons */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0px 6px 12px rgba(0, 95, 115, 0.3); /* Modern shadow effect */
+}
+
+.addtocart .active-add-to-cart:hover {
+  background-color: #028090; /* Darker teal on hover */
+  transform: translateY(-3px); /* Lift effect on hover */
+}
+
+.addtocart .inactive-add-to-cart {
+  background-color: #cccccc; /* Disabled style */
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* Product Attribute Section */
+.single-product .attribute {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.single-product .attribute h3 {
+  font-weight: 600;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  color: #05668d;
+}
+
+/* Product Description */
+.single-product .description {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 1.1rem;
+  color: #4a4a4a; /* Softer dark grey */
+  line-height: 1.75rem;
+  margin-top: 1.5rem;
+}
+
+/* Pricing Section */
+.pricing-section {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1.5rem;
+  gap: 1rem;
+}
+
+.pricing-section h3 {
+  font-weight: 700;
+  font-size: 1.75rem;
+  color: #05668d;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .product-showcase {
+      grid-template-columns: repeat(2, 1fr); /* 2-column layout for tablets */
+  }
+
+  .single-product-titles {
+      padding: 4rem 1rem;
+  }
+}
+
+@media (max-width: 460px) {
+  .single-product-titles {
+      padding: 2rem;
+  }
+
+  .product-showcase {
+      grid-template-columns: 1fr; /* Single column layout for mobile */
+      gap: 1.5rem;
+  }
+
+  .addtocart .active-add-to-cart,
+  .addtocart .inactive-add-to-cart {
+      width: 100%; /* Full-width button for mobile */
+      text-align: center;
+  }
+}

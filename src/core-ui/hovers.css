@@ -1,0 +1,97 @@
+/* Color Variables */
+:root {
+  --c-primary: #005f73; /* Modern teal for primary actions */
+  --c-secondary: #94d2bd; /* Light teal for backgrounds */
+  --c-accent: #e0fbfc; /* Subtle accent color */
+  --c-text: #333333; /* Darker grey for text */
+  --c-hover: #0a9396; /* Brighter teal for hover states */
+  --c-bg: #f0f4f8; /* Light neutral background */
+}
+
+/* TRANSITIONS */
+.order-btn,
+.active-add-to-cart,
+.cartoverlay-product-interaction button,
+.cart-product-interaction button,
+.view-bag,
+.check-out,
+.clear-cart,
+.single-currency,
+.big-picture,
+.big-picture.zoom-image,
+.cart-overlay-button {
+  transition: all ease-in-out 0.3s;
+  border-radius: 12px; /* Softer, rounder corners */
+  background-color: var(--c-primary); /* Modern primary color */
+  color: white;
+}
+
+@media (hover: hover) {
+  .order-btn:hover,
+  .active-add-to-cart:hover,
+  .cartoverlay-product-interaction button:hover,
+  .cart-product-interaction button:hover,
+  .view-bag:hover,
+  .check-out:hover,
+  .clear-cart:hover,
+  .single-currency:hover {
+    transition: all ease-in-out 0.3s;
+    background-color: var(--c-hover); /* Modern hover effect */
+    color: white;
+    border-color: var(--c-hover);
+  }
+
+  .order-btn:hover,
+  .active-add-to-cart:hover {
+    opacity: 0.95; /* Subtle opacity change on hover */
+  }
+
+  .cartoverlay-product-interaction button:hover,
+  .cart-product-interaction button:hover {
+    color: var(--c-text); /* High contrast text for clarity */
+    border-color: var(--c-hover);
+  }
+
+  .view-bag:hover {
+    color: var(--c-hover);
+    border-color: var(--c-hover);
+  }
+
+  .check-out:hover,
+  .clear-cart:hover {
+    background-color: var(--c-secondary); /* Transparent light teal background */
+    border-color: var(--c-hover);
+  }
+}
+
+/* Responsive design improvements */
+@media (max-width: 768px) {
+  .order-btn,
+  .active-add-to-cart,
+  .view-bag,
+  .check-out,
+  .clear-cart,
+  .single-currency {
+    width: 100%; /* Full width for smaller screens */
+    font-size: 1.1rem; /* Increased font size for better readability */
+  }
+}
+
+/* Overall Style Enhancements */
+body {
+  background-color: var(--c-bg); /* Light neutral background */
+  color: var(--c-text); /* Dark grey text for contrast */
+  font-family: 'Poppins', sans-serif; /* Modern, elegant font */
+}
+
+button {
+  padding: 12px 24px; /* Comfortable button sizes */
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  transform: translateY(-2px); /* Lift button slightly on hover */
+  box-shadow: 0px 5px 15px rgba(0, 95, 115, 0.2); /* Modern shadow for depth */
+}

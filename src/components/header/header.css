@@ -1,0 +1,198 @@
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgba(255, 255, 255, 0.85); /* More transparency for a sleeker look */
+    backdrop-filter: blur(15px); /* Enhanced blur for a smoother, glassy effect */
+    z-index: 999;
+    padding: 2.5rem; /* Increased padding for a more spacious header */
+    box-shadow: 0px 6px 20px rgba(0, 95, 115, 0.25); /* Softer, diffused shadow for elegance */
+    border-bottom: 2px solid rgba(0, 95, 115, 0.2); /* Subtle border for added definition */
+}
+
+header ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    gap: 2.5rem; /* Increased gap for more spacing and balance */
+    text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700; /* Stronger font-weight for a bold, statement look */
+    font-size: 1.1rem; /* Slightly larger for better legibility */
+    justify-content: center;
+    letter-spacing: 1.2px; /* Increased letter-spacing for a cleaner look */
+}
+
+header ul a {
+    text-decoration: none;
+    color: var(--c-text); /* Darker text for better contrast */
+    transition: color 0.3s ease; /* Smooth transition on hover */
+}
+
+header ul li:hover {
+    color: var(--c-primary); /* Bold hover color */
+    transform: translateY(-5px); /* More prominent lift effect */
+    transition: all 0.3s ease-in-out;
+    letter-spacing: 1.5px; /* Adds extra spacing on hover for a dynamic effect */
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 2rem; /* Adjusted padding for better alignment */
+    background-color: rgba(255, 255, 255, 0.3); /* More transparency for a lighter touch */
+    backdrop-filter: blur(10px); /* Increased blur for depth */
+    position: relative;
+    z-index: 998;
+    box-shadow: 0px 6px 15px rgba(0, 95, 115, 0.2); 
+    border-bottom: 1px solid rgba(0, 95, 115, 0.15); /* Light border for a clean edge */
+    border-radius: 8px;
+}
+
+.header-one {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500; /* Medium weight for better readability */
+    color: var(--c-text);
+    font-size: 1rem;
+    letter-spacing: 1px; /* Consistent spacing for modern look */
+}
+
+.icons-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1.5rem; /* More spacing for clearer separation between icons */
+}
+
+.active-category-link::after {
+    content: "";
+    position: absolute;
+    height: 0.15rem; /* Thinner underline for a sleek look */
+    background-color: var(--c-primary);
+    width: 60%; /* Wider underline for better emphasis */
+    transform: translateX(-50%);
+    left: 50%;
+    bottom: -0.4rem;
+    transition: width 0.3s ease; /* Smooth transition for dynamic look */
+}
+
+.inactive-category-link li {
+    color: var(--c-text);
+}
+
+.active-category-link li {
+    color: var(--c-primary); /* More vibrant highlight for active link */
+}
+
+/* Hamburger Menu for Mobile */
+.hamburger {
+    display: none;
+}
+
+@media (max-width: 750px) {
+    nav {
+        display: none;
+    }
+
+    .hamburger {
+        display: inline-block;
+        position: absolute;
+        z-index: 997;
+        right: 1.5rem;
+        padding: 1rem;
+        cursor: pointer;
+        width: 3rem;
+        height: 3rem;
+        background-color: var(--c-primary);
+        border-radius: 50%; /* More rounded for a distinct button */
+        box-shadow: 0px 4px 10px rgba(0, 95, 115, 0.3); /* Modern shadow for depth */
+        transition: background-color 0.3s ease;
+    }
+
+    .hamburger:hover {
+        background-color: #0a9396; /* Lighter hover state for better interaction */
+    }
+}
+
+/* Mobile Menu Active State */
+.active-menu {
+    position: fixed;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3rem;
+    top: 0;
+    padding: 4rem 0;
+    background-color: rgba(255, 255, 255, 0.95); /* Slightly transparent for sleek look */
+    backdrop-filter: blur(15px); /* Heavier blur for depth */
+    z-index: 996;
+    box-shadow: 0px 10px 25px rgba(0, 95, 115, 0.35); /* Deeper shadow for a floating effect */
+}
+
+.active-menu ul {
+    flex-direction: column;
+    font-size: 1.3rem; /* Larger for better readability on mobile */
+    text-align: center;
+    letter-spacing: 1.5px; /* Spacious text for better clarity */
+}
+
+.active-menu .header-one {
+    font-size: 1.3rem;
+}
+
+/* Cart Overlay Styling */
+.active-menu .cart-overlay {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.85); /* Slightly darker for more contrast */
+    backdrop-filter: blur(12px); /* More blur for depth */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem; /* Slightly reduced gap for better layout */
+    padding: 2.5rem;
+    z-index: 998;
+    color: var(--c-white);
+    box-shadow: 0px 10px 30px rgba(0, 95, 115, 0.3); /* Deeper shadow for depth */
+}
+
+.cart-overlay .overlay-title,
+.cart-overlay .all-products-totals,
+.cart-overlay .cart-overlay-item-data {
+    padding: 1.5rem;
+    background-color: rgba(255, 255, 255, 0.15); /* Slightly less transparent for contrast */
+    border-radius: 15px; /* Softer corners for a unique look */
+    box-shadow: 0px 5px 15px rgba(0, 95, 115, 0.2); /* Subtle shadow for definition */
+}
+
+/* Hamburger Icon in Cart Overlay */
+.cartoverlay-hamburger {
+    display: none;
+}
+
+.active-overlay .cartoverlay-hamburger {
+    display: inline-block;
+    position: absolute;
+    z-index: 999;
+    right: 1.5rem;
+    padding: 1rem;
+    cursor: pointer;
+    width: 3rem;
+    height: 3rem;
+    background-color: var(--c-primary); /* Teal for modern look */
+    border-radius: 50%; /* Rounded for sleek design */
+    box-shadow: 0px 4px 12px rgba(0, 95, 115, 0.3); /* Shadow for depth */
+}
+
+.active-overlay .cartoverlay-hamburger:hover {
+    background-color: #0a9396; /* Lighter hover effect */
+}

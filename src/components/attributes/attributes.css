@@ -1,0 +1,80 @@
+/* Container and Titles */
+.attribute-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    padding: 1rem;
+  }
+  
+  .attribute-title {
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #444;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+  }
+  
+  /* Attribute Buttons Row */
+  .attribute-buttons-row {
+    display: flex;
+    flex-direction: row; /* Horizontal layout */
+    gap: 0.8rem;
+    flex-wrap: wrap;
+  }
+  
+  /* Button Wrapper */
+  .attribute-button-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .attribute-button-wrapper:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Text Attribute Button - Pill Shape */
+  .text-attribute-button {
+    padding: 0.6rem 1rem;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #333;
+    background-color: #f0f2f5;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+  
+  .text-attribute-button.active {
+    background-color: #007b8a;
+    color: #ffffff;
+    box-shadow: 0px 4px 8px rgba(0, 123, 138, 0.3);
+  }
+  
+  /* Color Circle Attribute Button */
+  .color-circle {
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+  }
+  
+  .color-circle.active {
+    border-color: #007b8a;
+    transform: scale(1.1);
+  }
+  
+  /* Selected and Unselected Color Styles */
+  .selected-color-box-section {
+    border: 2px solid #ff7070;
+  }
+  
+  .unselected-color-box-section {
+    border: 2px solid transparent;
+  }
+  

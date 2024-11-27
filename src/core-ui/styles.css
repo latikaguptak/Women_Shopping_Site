@@ -1,0 +1,178 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+:root {
+  --font-primary: "Poppins", sans-serif;
+  --c-text: #333; /* Darker text for better contrast */
+  --c-primary: #005f73; /* Modern teal for primary color */
+  --c-accent: #94d2bd; /* Light accent color for highlights */
+  --c-background: #f0f4f8; /* Light background for sections */
+  --c-white: #ffffff;
+  --c-gray: #8c8c8c; /* Subtle gray for secondary text */
+  --product-card-box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.1); /* Subtle modern shadow */
+  --c-scrollbar-track: #e0e0e0;
+  --c-scrollbar-handle: rgba(0, 0, 0, 0.2);
+  --c-scrollbar-handle-hover: #005f73; /* Teal hover color */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-primary);
+  background-color: var(--c-background); /* Modern light background */
+  color: var(--c-text);
+  overflow-y: scroll;
+}
+
+body::-webkit-scrollbar {
+  width: 8px;
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--c-scrollbar-track);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--c-scrollbar-handle);
+  border-radius: 10px;
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background-color: var(--c-scrollbar-handle-hover);
+}
+
+/* Navbar Styling */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: var(--c-white);
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.05); /* Subtle shadow for clarity */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+header ul li {
+  padding: 0.5rem 1rem;
+}
+
+header a {
+  font-size: 1rem;
+  color: var(--c-text);
+  text-transform: capitalize;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+header a:hover {
+  color: var(--c-primary); /* Modern teal hover color */
+}
+
+/* Responsive Navbar */
+@media screen and (max-width: 768px) {
+  header {
+    flex-direction: column;
+  }
+
+  header ul {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  header ul li {
+    text-align: center;
+  }
+}
+
+/* Button Styles */
+button,
+.order-btn {
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px; /* Rounded button for a modern look */
+  border: none;
+  background-color: var(--c-primary);
+  color: var(--c-white);
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0px 4px 10px rgba(0, 95, 115, 0.2); /* Modern shadow */
+}
+
+button:hover,
+.order-btn:hover {
+  background-color: var(--c-accent); /* Light hover effect */
+  transform: translateY(-2px); /* Subtle lift on hover */
+}
+
+.inactive-add-to-cart {
+  background-color: var(--c-gray);
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+/* Product Display */
+.store-products {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.store-products .product-card {
+  background-color: var(--c-white);
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: var(--product-card-box-shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.store-products .product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 12px 20px rgba(0, 95, 115, 0.15);
+}
+
+@media screen and (max-width: 1200px) {
+  .store-products {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .store-products {
+    grid-template-columns: 1fr;
+  }
+}
+
+.cart-totals {
+  background-color: var(--c-background);
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: var(--product-card-box-shadow);
+}
+
+/* Success Alert */
+.success-alert {
+  display: none;
+}
+
+.success-alert.visible {
+  display: inline-block;
+  position: fixed;
+  top: 10%;
+  right: 5%;
+  background-color: rgba(0, 95, 115, 0.9);
+  color: var(--c-white);
+  padding: 0.7rem;
+  border-radius: 8px;
+  box-shadow: 0px 5px 15px rgba(0, 95, 115, 0.3);
+}

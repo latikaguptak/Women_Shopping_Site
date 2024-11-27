@@ -1,0 +1,86 @@
+/* Initial Currency Button */
+.initial-currency {
+    display: flex;
+    flex-direction: row;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 1.25rem; /* Increased padding for better touch area */
+    gap: 0.75rem;
+    font-family: 'Poppins', sans-serif; /* Modern font for a clean look */
+    color: #ffffff; /* Neutral text color for contrast */
+    font-size: 1.4rem;
+    border-radius: 50px; /* Fully rounded for modern look */
+    background-color: rgba(198, 235, 242, 0.1); /* Soft teal background */
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 95, 115, 0.1); /* Subtle shadow */
+}
+
+.initial-currency:hover {
+    background-color: rgba(0, 95, 115, 0.2); /* Darker background on hover */
+    box-shadow: 0 8px 20px rgba(0, 95, 115, 0.3); /* Stronger shadow on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+}
+
+.initial-currency p {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 0.5rem;
+    color: #fff; /* Modern teal for text */
+    font-weight: 600; /* Bolder text for emphasis */
+}
+
+.arrow-icon {
+    font-size: 1.5rem;
+    color: #028090; /* Teal arrow icon for modern look */
+    transition: transform 0.3s ease; /* Smooth rotation */
+}
+
+.initial-currency:hover .arrow-icon {
+    transform: rotate(180deg); /* Rotate arrow on hover */
+}
+
+/* Currency Switcher Dropdown */
+.currency-switcher {
+    position: absolute;
+    top: 100%;
+    flex-direction: column;
+    background-color: rgba(0, 95, 115, 0.9); /* Darker teal background */
+    backdrop-filter: blur(12px); /* Enhanced blur for modern style */
+    width: max-content;
+    padding: 0.75rem 0; /* Padding for cleaner layout */
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2); /* Depth with shadow */
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    color: #fff; /* White text for high contrast */
+    z-index: 1000; /* On top of everything */
+}
+
+/* Individual Currency Option */
+.single-currency {
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 1.1rem; /* Slightly larger for readability */
+    padding: 1rem 1.5rem; /* Comfortable padding */
+    transition: background-color 0.3s ease;
+    border-radius: 8px; /* Soft rounding for modern look */
+    color: #fff; /* White text for contrast */
+}
+
+.single-currency p {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.single-currency:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Softer hover background */
+}
+
+.currency-switcher .single-currency:hover {
+    background-color: rgba(0, 95, 115, 0.3); /* Teal hover effect for switcher */
+}

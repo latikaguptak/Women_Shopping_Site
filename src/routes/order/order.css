@@ -1,0 +1,193 @@
+/* Order Section */
+.order,
+.order-success {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Poppins', sans-serif; /* Modern, clean font */
+}
+
+.order {
+    gap: 2.5rem;
+    margin-top: 3.5rem;
+    padding: 2.5rem;
+    margin-bottom: 4.5rem;
+    background-color: #f7fafc; /* Light background for contrast */
+    border-radius: 12px; /* Rounded corners for a sleek look */
+    box-shadow: 0 6px 18px rgba(0, 95, 115, 0.1); /* Soft shadow for depth */
+    position: relative;
+    max-width: 800px; /* Limit width for a better reading experience */
+    margin: 0 auto; /* Center the order container */
+}
+
+.order h2,
+.order-success h2 {
+    font-size: 2.5rem;
+    letter-spacing: 1.5px;
+    text-align: center;
+    color: #05668d; /* Modern teal color for headings */
+}
+
+.order-success {
+    gap: 1.5rem;
+    width: 100%;
+    margin: 0 auto;
+    background-color: #f0f4f8; /* Soft background for success section */
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 95, 115, 0.1);
+}
+
+.order-success h2 {
+    font-size: 2rem;
+    color: #028090;
+}
+
+.order-success h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #333;
+}
+
+/* Print and Exit Buttons */
+.print,
+.exit-order {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.75rem 2rem;
+    width: auto; /* Adjust for responsive width */
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    border-radius: 50px; /* Fully rounded for modern look */
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.print {
+    color: #fff;
+    border: none;
+    background-color: #028090; /* Modern teal for primary action */
+    box-shadow: 0px 4px 12px rgba(0, 95, 115, 0.3); /* Subtle shadow */
+}
+
+.print:hover {
+    background-color: #05668d; /* Darker teal on hover */
+    transform: translateY(-2px); /* Lift effect */
+    box-shadow: 0px 6px 16px rgba(0, 95, 115, 0.4);
+}
+
+.exit-order {
+    color: #888; /* Soft gray color for secondary button */
+    background-color: #f0f0f0; /* Light gray background */
+    border: 1px solid #ccc;
+    opacity: 0.9;
+}
+
+.exit-order:hover {
+    background-color: #e0e0e0; /* Darker on hover */
+    transform: translateY(-2px); /* Lift effect */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Order Details and Items Ordered */
+.order-details,
+.items-ordered {
+    list-style: none;
+    padding-left: 0;
+}
+
+.order-details li,
+.items-ordered li {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.items-ordered li span {
+    color: #028090; /* Highlight price or important info in teal */
+    font-weight: 600;
+}
+
+/* Confirmation Dialog */
+.confirmation-dialog {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.7); /* Dark overlay */
+    backdrop-filter: blur(8px); /* Stronger blur for focus effect */
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.confirmation-dialog-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    background-color: #fff; /* White background for contrast */
+    padding: 3rem;
+    border-radius: 12px; /* Rounded for modern style */
+    box-shadow: 0px 6px 20px rgba(0, 95, 115, 0.2); /* Soft shadow */
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+    color: #333;
+}
+
+.confirmation-dialog-inner h3 {
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: #028090; /* Teal color for headings */
+}
+
+/* Confirmation Dialog Buttons */
+.confirmation-dialog-inner .buttons button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.75rem 1.5rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: #fff;
+    background-color: #028090;
+    border: none;
+    border-radius: 50px; /* Fully rounded for modern look */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0px 4px 12px rgba(0, 95, 115, 0.3);
+}
+
+.confirmation-dialog-inner .buttons button:hover {
+    background-color: #05668d; /* Darker teal on hover */
+    transform: translateY(-2px); /* Lift effect */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .order,
+    .order-success,
+    .confirmation-dialog-inner {
+        padding: 2rem;
+    }
+
+    .order h2,
+    .order-success h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 500px) {
+    .order h2,
+    .order-success h2 {
+        font-size: 1.75rem;
+    }
+
+    .print,
+    .exit-order {
+        width: 100%;
+        text-align: center;
+    }
+}

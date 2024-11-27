@@ -1,0 +1,114 @@
+@media screen and (max-width: 1201px) {
+  .store-products {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem; /* Maintain spacious layout for modern look */
+  }
+
+  .single-product {
+    gap: 1.5rem; /* Added spacing for a clean, airy design */
+  }
+}
+
+@media screen and (max-width: 1025px) {
+  .single-product {
+    flex-direction: column;
+    align-items: center; /* Centered for better focus on the product */
+    padding: 1rem; /* Padding for more breathing room */
+  }
+}
+
+@media screen and (max-width: 801px) {
+  header {
+    gap: 0;
+    padding: 1rem;
+    background-color: var(--c-background); /* Light background for modern feel */
+  }
+
+  .store-products {
+    grid-template-columns: 1fr; /* Single-column layout for readability */
+    gap: 2rem; /* Increased gap for clarity and modern structure */
+  }
+
+  .product-showcase {
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 2rem; /* More space for better visual hierarchy */
+  }
+
+  .big-picture {
+    grid-column-start: 1;
+    grid-row-start: 1;
+    max-width: 100%; /* Ensure images are responsive */
+    border-radius: 12px; /* Softer, rounded corners */
+    box-shadow: 0px 4px 12px rgba(0, 95, 115, 0.2); /* Modern shadow effect */
+  }
+
+  .mini-pictures {
+    flex-direction: row;
+    width: 100%;
+    overflow-x: scroll;
+    gap: 1.5rem; /* Smoother scrolling experience */
+    padding: 1rem 0;
+  }
+
+  .grid-one,
+  .grid-two,
+  .grid-three,
+  .grid-four,
+  .grid-five {
+    height: 25rem; /* Emphasize the height for a modern feel */
+    border-radius: 12px; /* Rounded corners for a soft, clean look */
+    box-shadow: 0px 5px 15px rgba(0, 95, 115, 0.1); /* Minimal shadow for depth */
+  }
+
+  .grid-four .grid-button,
+  .grid-five .grid-button {
+    position: absolute;
+    right: 10%;
+    background-color: var(--c-primary); /* Modern teal for buttons */
+    border-radius: 50px; /* Rounded buttons for a smooth UI */
+    color: white;
+    padding: 0.5rem 1.5rem;
+    box-shadow: 0px 3px 8px rgba(0, 95, 115, 0.2); /* Subtle shadow for depth */
+  }
+
+  .landing-hero {
+    min-height: 35rem; /* Spacious, modern look for the hero section */
+    background: var(--c-background);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .cart-content {
+    flex-direction: column-reverse;
+    padding: 1.5rem; /* Padding to enhance the mobile experience */
+    gap: 1rem; /* More space for a cleaner, modern look */
+  }
+
+  .cart-product-interaction {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1rem; /* More space for better clarity */
+  }
+
+  .order-btn,
+  .check-out,
+  .clear-cart {
+    width: 100%; /* Full-width buttons for better UX on mobile */
+    border-radius: 50px; /* Rounded buttons for a modern, sleek look */
+    padding: 1rem;
+    font-size: 1.2rem; /* Increased font size for better readability */
+    box-shadow: 0px 5px 15px rgba(0, 95, 115, 0.2); /* Subtle modern shadow */
+  }
+
+  .mini-pictures {
+    flex-direction: row;
+    width: 100%;
+    overflow-x: scroll;
+    gap: 1rem; /* Sufficient spacing for a smooth experience */
+  }
+}
